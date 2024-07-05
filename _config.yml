@@ -1,0 +1,2 @@
+# Redirect all HTTP requests to HTTPS
+url: "https://www.walkr.co.za"
