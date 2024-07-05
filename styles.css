@@ -16,7 +16,7 @@ body {
     padding: 10px;
     position: relative;
     border: 1px solid #000;
-    animation: flash 3s infinite;
+    animation: flash 5s infinite;
 }
 
 @keyframes flash {
@@ -82,14 +82,14 @@ nav ul.nav-left {
 nav ul.nav-left li {
     position: relative;
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 }
 
 nav ul.nav-right li {
     margin-left: 20px;
     position: relative;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -147,7 +147,6 @@ nav ul li ul.submenu li ul.subsubmenu {
 nav ul li ul.submenu li:hover ul.subsubmenu {
     display: block;
     animation: fadeIn 0.3s;
-    margin-top: 20px;
 }
 
 nav ul li ul li {
