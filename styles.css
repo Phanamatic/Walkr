@@ -73,15 +73,17 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    align-items: center;
 }
 
 nav ul.nav-left {
     flex-grow: 1;
+    justify-content: center;
 }
 
 nav ul.nav-left li {
     position: relative;
-    margin-right: 10px;
+    margin: 0 20px;
     font-size: 22px;
     font-weight: bold;
 }
@@ -130,21 +132,6 @@ nav ul li ul.submenu {
 }
 
 nav ul li:hover ul.submenu {
-    display: block;
-    animation: fadeIn 0.3s;
-}
-
-nav ul li ul.submenu li ul.subsubmenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #000;
-    z-index: 1000;
-}
-
-nav ul li ul.submenu li:hover ul.subsubmenu {
     display: block;
     animation: fadeIn 0.3s;
 }
