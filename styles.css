@@ -148,28 +148,6 @@ nav ul li ul li {
     position: relative;
     text-align: center;
     padding: 10px;
-    border-top: 1px solid #000;
-}
-
-nav ul li ul li:first-child {
-    border-top: none;
-}
-
-nav ul li ul li::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #000;
-    transform: scaleX(0);
-    transform-origin: bottom left;
-    transition: transform 0.25s ease-out;
-}
-
-nav ul li ul li:hover::before {
-    transform: scaleX(1);
 }
 
 nav ul li ul li a {
@@ -177,6 +155,24 @@ nav ul li ul li a {
     display: block;
     width: 100%;
     text-align: center;
+}
+
+nav ul li ul li a::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 20px); /* To match padding */
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 10px; /* To match padding */
+    background-color: #000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 h1 {
