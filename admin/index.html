@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Walkr</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="admin-content" style="display:none;">
+        <h1>Admin Page</h1>
+        <p>Welcome to the admin page. This page is restricted to authorized users only.</p>
+        <!-- Add your admin content here -->
+    </div>
+    <div id="admin-login">
+        <h2>Admin Login</h2>
+        <input type="password" id="admin-password" placeholder="Enter Password">
+        <button onclick="checkPassword()">Login</button>
+        <p id="login-message"></p>
+    </div>
+    <script>
+        const correctPassword = 'your_admin_password'; // Replace with your password
+
+        function checkPassword() {
+            const inputPassword = document.getElementById('admin-password').value;
+            if (inputPassword === correctPassword) {
+                document.getElementById('admin-login').style.display = 'none';
+                document.getElementById('admin-content').style.display = 'block';
+            } else {
+                document.getElementById('login-message').innerText = 'Incorrect password. Try again.';
+            }
+        }
+    </script>
+</body>
+</html>
