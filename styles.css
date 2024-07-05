@@ -76,24 +76,20 @@ nav ul {
     align-items: center;
 }
 
-nav ul.nav-left {
+nav ul.nav-home {
+    margin-right: auto;
+}
+
+nav ul.nav-center {
     flex-grow: 1;
     justify-content: center;
 }
 
-nav ul.nav-left .nav-home {
-    margin-right: auto;
+nav ul.nav-right {
+    margin-left: auto;
 }
 
-nav ul.nav-left li {
-    position: relative;
-    margin: 0 20px;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-nav ul.nav-right li {
-    margin-left: 20px;
+nav ul li {
     position: relative;
     font-size: 22px;
     font-weight: bold;
