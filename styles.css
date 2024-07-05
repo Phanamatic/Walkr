@@ -24,7 +24,7 @@ body {
         background-color: #ff9800;
     }
     50% {
-        background-color: #ffcc80;
+        background-color: #ffb74d;
     }
 }
 
@@ -67,6 +67,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    position: relative;
 }
 
 nav ul {
@@ -130,7 +131,8 @@ nav ul li ul.submenu {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #fff;
     border: 1px solid #000;
     z-index: 1000;
@@ -138,7 +140,7 @@ nav ul li ul.submenu {
 
 nav ul li:hover ul.submenu {
     display: block;
-    animation: fadeIn 0.3s;
+    animation: slideIn 0.3s;
 }
 
 nav ul li ul li {
@@ -151,12 +153,19 @@ nav ul li ul li a {
     color: #000;
 }
 
-@keyframes fadeIn {
+nav ul li ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@keyframes slideIn {
     from {
         opacity: 0;
+        transform: translateX(-20%);
     }
     to {
         opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -228,4 +237,29 @@ footer {
 
 #login-message {
     color: red;
+}
+
+.gif-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+
+.gif-container img {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    animation: moveGif 10s linear infinite;
+}
+
+@keyframes moveGif {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 100%;
+    }
 }
