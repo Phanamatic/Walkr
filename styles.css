@@ -66,6 +66,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
 }
 
 nav ul {
@@ -76,25 +77,27 @@ nav ul {
     align-items: center;
 }
 
-nav ul.nav-home {
-    margin-right: auto;
+nav ul.nav-left {
+    flex: 1;
+    justify-content: flex-start;
 }
 
 nav ul.nav-center {
     display: flex;
-    flex-grow: 1;
     justify-content: center;
-    align-items: center;
+    flex-grow: 1;
 }
 
 nav ul.nav-right {
-    margin-left: auto;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 nav ul li {
     position: relative;
     font-size: 22px;
     font-weight: bold;
+    margin: 0 10px;
 }
 
 nav ul li a {
@@ -195,34 +198,4 @@ footer {
         max-width: 960px;
         margin: 0 auto;
     }
-}
-
-/* Styles for admin page */
-.admin-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    text-align: center;
-}
-
-.admin-container h1, .admin-container h2 {
-    margin-bottom: 20px;
-}
-
-.admin-container input[type="password"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.admin-container button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#login-message {
-    color: red;
 }
