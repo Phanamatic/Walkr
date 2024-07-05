@@ -155,18 +155,7 @@ nav ul li ul li:first-child {
     border-top: none;
 }
 
-nav ul li ul li a {
-    color: #000;
-    display: block;
-    width: 100%;
-    text-align: center;
-}
-
-nav ul li ul li:hover {
-    background-color: #f0f0f0;
-}
-
-nav ul li ul li:hover::after {
+nav ul li ul li::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -174,8 +163,20 @@ nav ul li ul li:hover::after {
     bottom: 0;
     left: 0;
     background-color: #000;
-    transform: scaleX(1);
+    transform: scaleX(0);
     transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li ul li:hover::before {
+    transform: scaleX(1);
+}
+
+nav ul li ul li a {
+    color: #000;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 h1 {
