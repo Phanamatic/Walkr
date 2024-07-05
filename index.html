@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="notification-bar" id="notification-bar">
-        <span>Important notification message here!</span>
         <button onclick="closeNotification()">X</button>
+        <span>Important notification message here!</span>
     </div>
     <header>
         <nav>
@@ -18,19 +18,14 @@
                 <li><a href="home.html"><img src="logo.png" alt="Home" class="nav-logo"></a></li>
                 <li>
                     <a href="services.html">Services</a>
-                    <ul>
+                    <ul class="submenu">
                         <li>
                             <a href="dog-walking.html">Dog Walking</a>
-                            <ul>
+                            <ul class="subsubmenu">
                                 <li><a href="dog-walking-pricing.html">Pricing</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="house-sitting.html">House Sitting</a>
-                            <ul>
-                                <li><a href="house-sitting-pricing.html">Pricing</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="house-sitting.html">House Sitting</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.html">Contact</a></li>
@@ -39,7 +34,7 @@
             <ul class="nav-right">
                 <li>
                     <a href="#">Account</a>
-                    <ul>
+                    <ul class="submenu">
                         <li><a href="login.html">Login</a></li>
                         <li><a href="signup.html">Signup</a></li>
                     </ul>
