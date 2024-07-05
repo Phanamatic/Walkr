@@ -24,7 +24,7 @@ body {
         background-color: #ff9800;
     }
     50% {
-        background-color: #ffb74d;
+        background-color: #ffcc80;
     }
 }
 
@@ -66,8 +66,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    position: relative;
 }
 
 nav ul {
@@ -75,30 +73,24 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    align-items: center;
 }
 
 nav ul.nav-left {
-    flex: 1;
-    justify-content: flex-start;
-}
-
-nav ul.nav-center {
-    display: flex;
-    justify-content: center;
     flex-grow: 1;
 }
 
-nav ul.nav-right {
-    flex: 1;
-    justify-content: flex-end;
+nav ul.nav-left li {
+    position: relative;
+    margin-right: 10px;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-nav ul li {
+nav ul.nav-right li {
+    margin-left: 20px;
     position: relative;
     font-size: 22px;
     font-weight: bold;
-    margin: 0 10px;
 }
 
 nav ul li a {
@@ -131,8 +123,7 @@ nav ul li ul.submenu {
     display: none;
     position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     background-color: #fff;
     border: 1px solid #000;
     z-index: 1000;
@@ -140,33 +131,40 @@ nav ul li ul.submenu {
 
 nav ul li:hover ul.submenu {
     display: block;
-    animation: slideIn 0.3s;
+    animation: fadeIn 0.3s;
+}
+
+nav ul li ul.submenu li ul.subsubmenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #000;
+    z-index: 1000;
+}
+
+nav ul li ul.submenu li:hover ul.subsubmenu {
+    display: block;
+    animation: fadeIn 0.3s;
 }
 
 nav ul li ul li {
     white-space: nowrap;
     margin-right: 0;
     position: relative;
-    text-align: center;
 }
 
 nav ul li ul li a {
     color: #000;
 }
 
-nav ul li ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-@keyframes slideIn {
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateX(-20%);
     }
     to {
         opacity: 1;
-        transform: translateX(0);
     }
 }
 
@@ -208,34 +206,4 @@ footer {
         max-width: 960px;
         margin: 0 auto;
     }
-}
-
-/* Styles for admin page */
-.admin-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    text-align: center;
-}
-
-.admin-container h1, .admin-container h2 {
-    margin-bottom: 20px;
-}
-
-.admin-container input[type="password"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.admin-container button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#login-message {
-    color: red;
 }
