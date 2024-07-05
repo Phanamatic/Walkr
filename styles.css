@@ -13,20 +13,59 @@ header {
     text-align: center;
 }
 
+.nav-logo {
+    height: 40px;
+    vertical-align: middle;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
+    margin: 0;
+    display: flex;
 }
 
-nav ul li {
-    display: inline-block;
+nav ul.nav-left {
+    flex-grow: 1;
+}
+
+nav ul.nav-left li {
+    position: relative;
     margin-right: 10px;
+}
+
+nav ul.nav-right li {
+    margin-left: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4CAF50;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    white-space: nowrap;
+    margin-right: 0;
 }
 
 main {

@@ -3,21 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Neighbourhood Dog Walking</title>
+    <title>Walkr - Dog Walking and House Sitting</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <h1>Welcome to The Neighbourhood Dog Walking</h1>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul class="nav-left">
+                <li><a href="index.html"><img src="logo.png" alt="Home" class="nav-logo"></a></li>
+                <li><a href="services.html">Services</a>
+                    <ul>
+                        <li><a href="dog-walking.html">Dog Walking</a>
+                            <ul>
+                                <li><a href="dog-walking-pricing.html">Pricing</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="house-sitting.html">House Sitting</a>
+                            <ul>
+                                <li><a href="house-sitting-pricing.html">Pricing</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Signup</a></li>
             </ul>
         </nav>
+        <h1>Welcome to Walkr</h1>
     </header>
     <main>
         <section>
