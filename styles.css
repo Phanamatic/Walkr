@@ -81,6 +81,10 @@ nav ul.nav-left {
     justify-content: center;
 }
 
+nav ul.nav-left .nav-home {
+    margin-right: auto;
+}
+
 nav ul.nav-left li {
     position: relative;
     margin: 0 20px;
