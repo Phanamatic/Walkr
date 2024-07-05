@@ -8,16 +8,18 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div id="admin-content" style="display:none;">
-        <h1>Admin Page</h1>
-        <p>Welcome to the admin page. This page is restricted to authorized users only.</p>
-        <!-- Add your admin content here -->
-    </div>
-    <div id="admin-login">
-        <h2>Admin Login</h2>
-        <input type="password" id="admin-password" placeholder="Enter Password">
-        <button onclick="checkPassword()">Login</button>
-        <p id="login-message"></p>
+    <div class="admin-container">
+        <div id="admin-content" style="display:none;">
+            <h1>Admin Page</h1>
+            <p>Welcome to the admin page. This page is restricted to authorized users only.</p>
+            <!-- Add your admin content here -->
+        </div>
+        <div id="admin-login">
+            <h2>Admin Login</h2>
+            <input type="password" id="admin-password" placeholder="Enter Password">
+            <button onclick="checkPassword()">Login</button>
+            <p id="login-message"></p>
+        </div>
     </div>
     <script>
         const correctPassword = 'your_admin_password'; // Replace with your password
@@ -31,6 +33,15 @@
                 document.getElementById('login-message').innerText = 'Incorrect password. Try again.';
             }
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const adminContent = document.getElementById('admin-content');
+            const adminLogin = document.getElementById('admin-login');
+            if (adminContent.style.display === 'none' && adminLogin.style.display === 'none') {
+                adminLogin.style.display = 'flex';
+                adminContent.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>

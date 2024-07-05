@@ -196,3 +196,33 @@ footer {
         margin: 0 auto;
     }
 }
+
+/* Styles for admin page */
+.admin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.admin-container h1, .admin-container h2 {
+    margin-bottom: 20px;
+}
+
+.admin-container input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.admin-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#login-message {
+    color: red;
+}
