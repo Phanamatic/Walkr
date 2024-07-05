@@ -63,8 +63,12 @@
     </footer>
     <script>
         function closeNotification() {
-            document.getElementById('notification-bar').style.display = 'none';
-            sessionStorage.setItem('notificationClosed', 'true');
+            const notificationBar = document.getElementById('notification-bar');
+            notificationBar.style.animation = 'fadeOut 0.5s forwards';
+            setTimeout(() => {
+                notificationBar.style.display = 'none';
+                sessionStorage.setItem('notificationClosed', 'true');
+            }, 500);
         }
 
         document.addEventListener('DOMContentLoaded', function () {
