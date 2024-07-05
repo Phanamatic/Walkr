@@ -8,6 +8,10 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <div class="notification-bar" id="notification-bar">
+        <span>Important notification message here!</span>
+        <button onclick="closeNotification()">X</button>
+    </div>
     <header>
         <nav>
             <ul class="nav-left">
@@ -57,5 +61,10 @@
     <footer>
         <p>&copy; 2024 Walkr</p>
     </footer>
+    <script>
+        function closeNotification() {
+            document.getElementById('notification-bar').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
