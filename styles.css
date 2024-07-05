@@ -24,7 +24,7 @@ body {
         background-color: #ff9800;
     }
     50% {
-        background-color: #ffcc80;
+        background-color: #ffb74d;
     }
 }
 
@@ -131,7 +131,6 @@ nav ul li ul.submenu {
 
 nav ul li:hover ul.submenu {
     display: block;
-    animation: fadeIn 0.3s;
 }
 
 nav ul li ul.submenu li ul.subsubmenu {
@@ -146,26 +145,21 @@ nav ul li ul.submenu li ul.subsubmenu {
 
 nav ul li ul.submenu li:hover ul.subsubmenu {
     display: block;
-    animation: fadeIn 0.3s;
 }
 
 nav ul li ul li {
     white-space: nowrap;
     margin-right: 0;
     position: relative;
+    text-align: center;
+    padding: 10px;
 }
 
 nav ul li ul li a {
     color: #000;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 h1 {
@@ -206,4 +200,34 @@ footer {
         max-width: 960px;
         margin: 0 auto;
     }
+}
+
+/* Styles for admin page */
+.admin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.admin-container h1, .admin-container h2 {
+    margin-bottom: 20px;
+}
+
+.admin-container input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.admin-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#login-message {
+    color: red;
 }
