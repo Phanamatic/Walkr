@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="notification-bar" id="notification-bar">
-        <button onclick="closeNotification()">X</button>
         <span>Important notification message here!</span>
+        <button onclick="closeNotification()">X</button>
     </div>
     <header>
         <nav>
@@ -25,7 +25,12 @@
                                 <li><a href="dog-walking-pricing.html">Pricing</a></li>
                             </ul>
                         </li>
-                        <li><a href="house-sitting.html">House Sitting</a></li>
+                        <li>
+                            <a href="house-sitting.html">House Sitting</a>
+                            <ul class="subsubmenu">
+                                <li><a href="house-sitting-pricing.html">Pricing</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li><a href="contact.html">Contact</a></li>
@@ -41,8 +46,8 @@
                 </li>
             </ul>
         </nav>
-        <h1>Welcome to Walkr</h1>
     </header>
+    <h1>Welcome to Walkr</h1>
     <main>
         <section>
             <h2>About Us</h2>
@@ -59,7 +64,14 @@
     <script>
         function closeNotification() {
             document.getElementById('notification-bar').style.display = 'none';
+            sessionStorage.setItem('notificationClosed', 'true');
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            if (sessionStorage.getItem('notificationClosed') === 'true') {
+                document.getElementById('notification-bar').style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
