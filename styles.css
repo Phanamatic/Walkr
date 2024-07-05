@@ -140,7 +140,7 @@ nav ul li ul.submenu {
 
 nav ul li:hover ul.submenu {
     display: block;
-    animation: slideIn 0.3s;
+    animation: fadeInSlideIn 0.3s;
 }
 
 nav ul li ul li {
@@ -159,7 +159,7 @@ nav ul li ul li a:hover::after {
     transform-origin: bottom left;
 }
 
-@keyframes slideIn {
+@keyframes fadeInSlideIn {
     from {
         opacity: 0;
         transform: translateX(-20%);
