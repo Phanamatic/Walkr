@@ -153,6 +153,19 @@ nav ul li ul li a {
     color: #000;
 }
 
+nav ul li ul li a::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 20px);
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 10px;
+    background-color: #000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
 nav ul li ul li a:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
