@@ -147,6 +147,7 @@ nav ul li ul li {
     margin-right: 0;
     position: relative;
     text-align: center;
+    padding: 10px;
 }
 
 nav ul li ul li a {
