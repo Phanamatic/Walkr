@@ -130,13 +130,12 @@ nav ul li a:hover::after {
 nav ul li ul.submenu {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: calc(100% + 1px);
+    left: 0;
     background-color: #fff;
     border: 1px solid #000;
     z-index: 1000;
-    text-align: center;
+    width: 200px;
 }
 
 nav ul li:hover ul.submenu {
@@ -144,24 +143,27 @@ nav ul li:hover ul.submenu {
 }
 
 nav ul li ul.submenu li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    border-bottom: 1px solid #000;
-}
-
-nav ul li ul.submenu li:last-child {
-    border-bottom: none;
+    width: 100%;
 }
 
 nav ul li ul.submenu li a {
-    display: block;
     width: 100%;
-    height: 100%;
-    color: #000;
-    text-decoration: none;
-    line-height: 50px;
+    display: block;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+}
+
+nav ul li ul.submenu li a:hover {
+    background-color: #f0f0f0;
+}
+
+nav ul li ul.submenu li:last-child a {
+    border-bottom: none;
+}
+
+nav ul li ul.submenu li a::after {
+    display: none;
 }
 
 h1 {
