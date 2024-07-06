@@ -31,7 +31,7 @@
             <ul class="nav-right">
                 <li>
                     <a href="#" aria-haspopup="true" aria-expanded="false">Account</a>
-                    <ul class="submenu">
+                    <ul class="submenu" id="account-submenu">
                         <li><a href="/account/login/">Login</a></li>
                         <li><a href="/account/signup/">Signup</a></li>
                     </ul>
@@ -59,6 +59,20 @@
             if (sessionStorage.getItem('notificationClosed') === 'true') {
                 document.getElementById('notification-bar').style.display = 'none';
             }
+
+            // Check if user is logged in
+            const isLoggedIn = false; // Replace with actual check
+
+            const accountSubmenu = document.getElementById('account-submenu');
+            accountSubmenu.innerHTML = isLoggedIn ? `
+                <li><a href="/account/details/">Details</a></li>
+                <li><a href="/account/history/">History</a></li>
+                <li><a href="/account/payments/">Payments</a></li>
+                <li><a href="/account/signout/">Sign Out</a></li>
+            ` : `
+                <li><a href="/account/login/">Login</a></li>
+                <li><a href="/account/signup/">Signup</a></li>
+            `;
         });
     </script>
 </body>
