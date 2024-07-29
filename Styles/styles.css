@@ -833,7 +833,7 @@ main p {
     margin: 12px 0;
     padding: 12px;
     border-radius: 12px;
-    background-color: #f1f1f1;
+    background-color: #f3efef71;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -843,7 +843,7 @@ main p {
 }
 
 .contact-item:hover {
-    background-color: #ddd;
+    background-color: #98b496;
 }
 
 .fa-whatsapp {

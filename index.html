@@ -5,9 +5,30 @@
     <link rel="shortcut icon" type="x-icon" href="./Images/WalkrDog.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WALKR | Coming Soon!</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="./Styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+
+.header-buttons {
+            position: absolute;
+            top: 39em;
+            right: 125px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-buttons a {
+            padding: 10px 20px;
+            background-color: #056f15b6; /* Color for the buttons */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .header-buttons a:hover {
+            background-color: #045a12;
+        } 
         .dog {
             visibility: hidden;
         }
@@ -287,6 +308,10 @@
                 <i class="fa fa-envelope"></i>
                 chris@walkr.co.za
             </a>
+        </div>
+        <div class="header-buttons">
+            <a href="login.html">Login</a>
+            <a href="createaccount.html">Create Account</a>
         </div>
     </main>  
 </body>
