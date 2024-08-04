@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Account Creationg</title>
+         <!-- Cool Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+        <!-- Our stylesheet -->
+        <link rel="stylesheet" type="text/css" href="../Styles/login.css".css>
+    </head>
+    <body>
+        <div id="login-box">
+            <div class="left">
+                <h1>Sign up</h1>
+                <input type="text" id="username" name="username" placeholder="username">
+                <input type="text" name="email" placeholder="E-mail">
+                <input type="password" id="password" name="password" placeholder="Password" />
+                
+                <input type="submit" id="signup" name="signup_submit" value="Sign Up" />
+            </div>
+
+            <div class="right">
+                <span class="loginwith">Sign in with<br>social network</span>
+
+                <button class="social-signin facebook">Log in with Facebook</button>
+                <button class="social-signin google">Log in with Google+</button>
+                <button class="social-signin google">Log in with Twitter</button>
+            </div>
+            <div class="class">OR</div>
+        </div>
+    </body>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+        import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword } from "ttps://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCSmT_lqML9REZBwdzz_M8DQEijev5XgDE",
+          authDomain: "walkrauth.firebaseapp.com",
+          databaseURL: "https://walkrauth-default-rtdb.firebaseio.com",
+          projectId: "walkrauth",
+          storageBucket: "walkrauth.appspot.com",
+          messagingSenderId: "55185178333",
+          appId: "1:55185178333:web:2e595cf835bcbac93a6534"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+
+        signup.addEventListener('click',(e) => {
+
+
+            var email = document.getElementById('email').value;
+            var email = document.getElementById('username').value;
+            var email = document.getElementById('password').value;
+
+            const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+         // Signed up 
+         const user = userCredential.user;
+         alert('user created');
+         // ...
+          })
+
+        .catch((error) => {
+          const errorCode = error.code;
+         const errorMessage = error.message;
+           
+         alert(account);
+         // ..
+         });
+        })
+      </script>
+</html>

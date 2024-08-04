@@ -5,315 +5,41 @@
     <link rel="shortcut icon" type="x-icon" href="./Images/WalkrDog.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WALKR | Coming Soon!</title>
-    <link rel="stylesheet" type="text/css" href="./Styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-
-.header-buttons {
-            position: absolute;
-            top: 39em;
-            right: 125px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .header-buttons a {
-            padding: 10px 20px;
-            background-color: #056f15b6; /* Color for the buttons */
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .header-buttons a:hover {
-            background-color: #045a12;
-        } 
-        .dog {
-            visibility: hidden;
-        }
-
-        @media only screen and (min-width: 1535px) and (min-height: 100px) {
-            .dog {
-                visibility: visible;
-            }
-        }
-
-        .location {
-            margin-top: 20px;
-        }
-
-        .location h3 {
-            margin-bottom: 10px;
-        }
-
-        .location-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .location-item {
-            display: flex;
-            align-items: center;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .location-item i {
-            font-size: 24px;
-            margin-right: 10px;
-            color: #056f15b6; /* red color for location pin */
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-    </style>
 </head>
 <body>
-    <div class="dog">
-        <div class="torso">
-            <div class="fur">
-                <div class="spot"></div>
-            </div>
-            <div class="neck">
-                <div class="fur"></div>
-                <div class="head">
-                    <div class="fur">
-                        <div class="snout"></div>
+    <main class="main-content">
+        <img src="./Images/DogWalking.gif" alt="Dog Walking" class="dog-walking-gif">
+        <div class="information-box">
+            <h1>Welcome to WALKR!</h1>
+            <h2>Your Trusted Dog Walking Service</h2>
+            <p>My website is fetching some <b style="color:black;">exciting new features!</b> While I'm busy perfecting it, let me take care of all <b style="color:black;">your dog walking needs.</b> Feel free to <b style="color:black;">reach out to us</b> – I can't wait to meet your furry pal!</p>
+            <div class="location">
+                <h3>My Locations:</h3>
+                <div class="location-container">
+                    <div class="location-item">
+                        <i class="fa fa-map-marker"></i>
+                        <span>Edenvale</span>
                     </div>
-                    <div class="ears">
-                        <div class="ear">
-                            <div class="fur"></div>
-                        </div>
-                        <div class="ear">
-                            <div class="fur"></div>
-                        </div>
-                    </div>
-                    <div class="eye"></div>
-                </div>
-                <div class="collar"></div>
-            </div>
-            <div class="legs">
-                <div class="leg">
-                    <div class="fur"></div>
-                    <div class="leg-inner">
-                        <div class="fur"></div>
-                    </div>
-                </div>
-                <div class="leg">
-                    <div class="fur"></div>
-                    <div class="leg-inner">
-                        <div class="fur"></div>
-                    </div>
-                </div>
-                <div class="leg">
-                    <div class="fur"></div>
-                    <div class="leg-inner">
-                        <div class="fur"></div>
-                    </div>
-                </div>
-                <div class="leg">
-                    <div class="fur"></div>
-                    <div class="leg-inner">
-                        <div class="fur"></div>
+                    <div class="location-item">
+                        <i class="fa fa-map-marker"></i>
+                        <span>Melrose</span>
                     </div>
                 </div>
             </div>
-            <div class="tail">
-                <div class="tail">
-                    <div class="tail">
-                        <div class="tail -end">
-                            <div class="tail ">
-                                <div class="tail">
-                                    <div class="tail">
-                                        <div class="tail"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <h3>Contact Me:</h3>
+            <div class="contact-info">
+                <a class="contact-item" href="https://wa.me/27767944736">
+                    <i class="fa fa-whatsapp"></i>
+                    076 794 4736
+                </a>
+                <a class="contact-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=chris@walkr.co.za">
+                    <i class="fa fa-envelope"></i>
+                    chris@walkr.co.za
+                </a>
             </div>
-        </div>
-    </div>
-
-    <div class="dog">
-        <div class="torso">
-            <div class="fur">
-                <div class="spot"></div>
-            </div>
-            <div class="neck">
-                <div class="fur"></div>
-                <div class="head">
-                    <div class="fur">
-                        <div class="snout"></div>
-                    </div>
-                    <div class="ears">
-                        <div class="ear">
-                            <div class="fur"></div>
-                        </div>
-                        <div class="ear">
-                            <div class="fur"></div>
-                        </div>
-                    </div>
-                    <div class="eye"></div>
-                </div>
-                <div class="collar"></div>
-            </div>
-            <div class="legs">
-                <div class="leg">
-                    <div class="fur"></div>
-                    <div class="leg-inner">
-                        <div class="fur"></div>
-                    </div>
-                </div>
-                <div class="leg">
-                    <div class="fur"></div>
-                    <div class="leg-inner">
-                        <div class="fur"></div>
-                    </div>
-                </div>
-                <div class="leg">
-                    <div class="fur"></div>
-                    <div class="leg-inner">
-                        <div class="fur"></div>
-                    </div>
-                </div>
-                <div class="leg">
-                    <div class="fur"></div>
-                    <div class="leg-inner">
-                        <div class="fur"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="tail">
-                <div class="tail">
-                    <div class="tail">
-                        <div class="tail -end">
-                            <div class="tail ">
-                                <div class="tail">
-                                    <div class="tail">
-                                        <div class="tail"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="dog">
-        <div class="torso">
-            <div class="fur">
-                <div class="spot"></div>
-            </div>
-            <div class="neck">
-                <div class="fur"></div>
-                <div class="head">
-                    <div class="fur">
-                        <div class="snout"></div>
-                    </div>
-                    <div class="ears">
-                        <div class="ear">
-                            <div class="fur"></div>
-                        </div>
-                        <div class="ear">
-                            <div class="fur"></div>
-                        </div>
-                    </div>
-                    <div class="eye"></div>
-                </div>
-                <div class="collar"></div>
-            </div>
-            <div class="legs">
-                <div class="leg">
-                    <div class="fur"></div>
-                    <div class="leg-inner">
-                        <div class="fur"></div>
-                    </div>
-                </div>
-                <div class="leg">
-                    <div class="fur"></div>
-                    <div class="leg-inner">
-                        <div class="fur"></div>
-                    </div>
-                </div>
-                <div class="leg">
-                    <div class="fur"></div>
-                    <div class="leg-inner">
-                        <div class="fur"></div>
-                    </div>
-                </div>
-                <div class="leg">
-                    <div class="fur"></div>
-                    <div class="leg-inner">
-                        <div class="fur"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="tail">
-                <div class="tail">
-                    <div class="tail">
-                        <div class="tail -end">
-                            <div class="tail ">
-                                <div class="tail">
-                                    <div class="tail">
-                                        <div class="tail"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <main>
-        <h1>Welcome to WALKR!</h1>
-        <h2>Your Trusted Dog Walking Service</h2>
-        <p>Our website is fetching some <b style="color:black;">exciting new features!</b> While we're busy perfecting it, let us take care of all <b style="color:black;">your dog walking needs.</b> Feel free to <b style="color:black;">reach out to us</b> – we can't wait to meet your furry pal!</p>
-        <div class="location">
-            <h3>Our Locations:</h3>
-            <div class="location-container">
-                <div class="location-item">
-                    <i class="fa fa-map-marker"></i>
-                    <span>Edenvale</span>
-                </div>
-                <div class="location-item">
-                    <i class="fa fa-map-marker"></i>
-                    <span>Melrose </span>
-                </div>
-            </div>
-        </div>
-        <h3>Contact Us:</h3>
-        <div class="contact-info">
-            <a class="contact-item" href="https://wa.me/27767944736">
-                <i class="fa fa-whatsapp"></i>
-                076 794 4736
-            </a>
-            <a class="contact-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=chris@walkr.co.za">
-                <i class="fa fa-envelope"></i>
-                chris@walkr.co.za
-            </a>
-        </div>
-        <div class="header-buttons">
-            <a href="login.html">Login</a>
-            <a href="createaccount.html">Create Account</a>
         </div>
     </main>  
-</body>
 </body>
 </html>
