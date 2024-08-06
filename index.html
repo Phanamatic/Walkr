@@ -2,44 +2,279 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="x-icon" href="./Images/WalkrDog.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WALKR | Coming Soon!</title>
-    <link rel="stylesheet" type="text/css" href="../Styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Walkr -  Dog Walking And House Sitting</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+        :root {
+            --primary: #3498db;
+            --secondary: #f39c12;
+            --accent: #e74c3c;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        nav {
+            background-color: var(--dark);
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--primary);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--light);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary);
+        }
+
+        .image-container {
+            margin-bottom: 2rem;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--secondary);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        #contactForm {
+            display: none;
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--primary);
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        button[type="submit"] {
+            background-color: var(--primary);
+            color: var(--light);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--secondary);
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 5px solid var(--secondary);
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
 </head>
 <body>
-    <main class="main-content">
-        <img src="./Images/DogWalking.gif" alt="Dog Walking" class="dog-walking-gif">
-        <div class="information-box">
-            <h1>Welcome to WALKR!</h1>
-            <h2>Your Trusted Dog Walking Service</h2>
-            <p>My website is fetching some <b style="color:black;">exciting new features!</b> While I'm busy perfecting it, let me take care of all <b style="color:black;">your dog walking needs.</b> Feel free to <b style="color:black;">reach out to us</b> – I can't wait to meet your furry pal!</p>
-            <div class="location">
-                <h3>My Locations:</h3>
-                <div class="location-container">
-                    <div class="location-item">
-                        <i class="fa fa-map-marker"></i>
-                        <a href="https://www.google.com/maps/place/Edenvale" target="_blank">Edenvale</a>
-                    </div>
-                    <div class="location-item">
-                        <i class="fa fa-map-marker"></i>
-                        <a href="https://maps.app.goo.gl/7XYgPRGGXUPzPDLE8" target="_blank">Melrose</a>
-                    </div>
-                </div>
-            </div>
-            <h3>Contact Me:</h3>
-            <div class="contact-info">
-                <a class="contact-item" href="https://wa.me/27767944736">
-                    <i class="fa fa-whatsapp"></i>
-                    076 794 4736
-                </a>
-                <a class="contact-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=chris@walkr.co.za">
-                    <i class="fa fa-envelope"></i>
-                    chris@walkr.co.za
-                </a>
-            </div>
+    <header>
+        <div class="container">
+            <h1>Walkr Walks & Sits (INTEGRATE WITH NAV BAR) + (ICON) </h1>
+            <p>Your pets' happiness is our priority!</p>
         </div>
-    </main>  
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#rates">Rates</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">RIGHT ALIGN WITH HAMBURGER</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="services">
+                <h2>Our Services(DEFINITLY CARDS WITH VECTORS)</h2>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Dog walking">
+                </div>
+                <p>We offer professional dog walking and house sitting services. </p>
+                <ul>
+                    <li>Daily Dog Walks</li>
+                    <li>Overnight Pet Sitting</li>
+                    <li>House Sitting</li>
+                    <li>Pet Playtime</li>
+                </ul>
+                <a href="#" class="btn" id="bookNow">Book Now</a>
+            </section>
+
+            <section id="rates">
+                <h2>Our Rates (CARDS - MAYBE DONT SHOW HERE)</h2>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Happy dog">
+                </div>
+                <ul>
+                    <li>30-minute dog walk: R2</li>
+                    <li>60-minute dog walk: R5</li>
+                    <li>Overnight pet sitting: R7 per night</li>
+                    <li>House sitting: R0 per day</li>
+                </ul>
+                <p>* Rates may vary based on location and number of pets</p>
+            </section>
+
+            <section id="about-us">
+                <h2>About Us (LEFT ALIGN IMAGE - RIGHT SPLIT WITH TEXT)</h2>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1553322396-0c9cd410975e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Team of pet sitters">
+                </div>
+                <p>Walkr Walks & Sits was founded in 2024. Our mission is to provide the best care for your furry friends when you can't be there. </p>
+            </section>
+
+            <section id="benefits">
+                <h2>Why Choose Us? (CARDS + CIRCLE HOVER CSS)</h2>
+                <ul>
+                    <li>Multiple Dog Clients</li>
+                    <li>Experienced pet professionals</li>
+                    <li>Flexible scheduling</li>
+                    <li>Regular updates and photos</li>
+                </ul>
+            </section>
+
+            <section id="testimonials">
+                <h2>What Our Clients Say (GOOGLE REVIEWS)</h2>
+                <blockquote>"Pawsome Walks & Sits is the best! My dog loves them!" - Happy Client</blockquote>
+            </section>
+
+            <section id="contactForm">
+                <h2>Contact Us</h2>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('bookNow').addEventListener('click', function(e) {
+            e.preventDefault();
+            var contactForm = document.getElementById('contactForm');
+            if (contactForm.style.display === 'none' || contactForm.style.display === '') {
+                contactForm.style.display = 'block';
+            } else {
+                contactForm.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
