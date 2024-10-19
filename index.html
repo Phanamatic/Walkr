@@ -6,6 +6,12 @@
     <title>Walkr - Dog Walking & House Sitting</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        nav.sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -39,6 +45,9 @@
         @keyframes fadeInOut {
             0% { opacity: 0; background-color: black; }
             20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; background-color: black; }
+        }20% { opacity: 1; }
             80% { opacity: 1; }
             100% { opacity: 0; background-color: black; }
         }
@@ -82,6 +91,9 @@
             justify-content: center;
             background-color: #333;
             margin: 0;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         nav ul li {
@@ -94,6 +106,12 @@
             padding: 14px 20px;
             display: block;
             transition: background-color 0.3s ease;
+        }
+
+        nav ul li a.logo {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: white;
         }
 
         nav ul li a:hover {
@@ -397,6 +415,14 @@
     </style>
     <script>
         window.addEventListener("DOMContentLoaded", function() {
+            const nav = document.querySelector('nav');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 0) {
+                    nav.classList.add('sticky');
+                } else {
+                    nav.classList.remove('sticky');
+                }
+            });
             const form = document.querySelector("#booking form");
             form.addEventListener("submit", async function(event) {
                 event.preventDefault();
@@ -419,18 +445,11 @@
     </script>
 </head>
 <body>
-    <header>
-        <video autoplay muted loop>
-            <source src="Videos/Banner.mp4" type="video/mp4">
-            <source src="Videos/Banner.webm" type="video/webm">
-            Your browser does not support HTML video.
-        </video>
-        <h1>Walkr</h1>
-        <p>Pet Care in The Neighbourhood Estate</p>
-    </header>
+    
 
     <nav>
         <ul>
+            <li><a href="#home" class="logo">Walkr</a></li>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#services">Services</a></li>
