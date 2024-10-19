@@ -405,7 +405,11 @@
 </head>
 <body>
     <header>
-        <video src="Videos/banner.mp4" autoplay muted loop></video>
+        <video autoplay muted loop>
+            <source src="Videos/Banner.mp4" type="video/mp4">
+            <source src="Videos/Banner.webm" type="video/webm">
+            Your browser does not support HTML video.
+        </video>
         <h1>Walkr</h1>
         <p>Caring for your furry friends, one walk at a time.</p>
     </header>
