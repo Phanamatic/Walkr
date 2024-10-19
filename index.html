@@ -2,45 +2,505 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="x-icon" href="./Images/WalkrDog.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WALKR | Coming Soon!</title>
-    <link rel="stylesheet" type="text/css" href="../Styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Walkr - Dog Walking & House Sitting</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
 
+        header {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #4caf50;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 40px;
+            max-width: 1000px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        #about img, #gallery img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+        }
+
+        form label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        form button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        #home {
+            background-color: #e0f7e9;
+            padding: 60px 40px;
+            text-align: center;
+            border-radius: 16px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+
+        #home h2 {
+            font-size: 3em;
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+
+        #home p {
+            font-size: 1.5em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        #about {
+            background-color: #ffffff;
+            padding: 60px 40px;
+            border-radius: 16px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+
+        #about h2 {
+            font-size: 2.5em;
+            color: #4caf50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #about p {
+            font-size: 1.3em;
+            color: #555;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        #about blockquote {
+            font-style: italic;
+            color: #333;
+            border-left: 4px solid #4caf50;
+            padding-left: 20px;
+            margin: 30px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        #services {
+            background-color: #f9f9f9;
+            padding: 60px 40px;
+            border-radius: 16px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        #services h2 {
+            font-size: 2.5em;
+            color: #4caf50;
+            margin-bottom: 30px;
+        }
+
+        #services ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        #services ul li {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 220px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #services ul li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        #services ul li h3 {
+            font-size: 1.5em;
+            color: #4caf50;
+            margin-bottom: 10px;
+        }
+
+        #services ul li p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        #testimonials {
+            background-color: #f9f9f9;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 50px;
+        }
+
+        #testimonials h2 {
+            text-align: center;
+            color: #4caf50;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .testimonial {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            margin: 30px 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial::before {
+            content: "\201C";
+            font-size: 4em;
+            color: #4caf50;
+            position: absolute;
+            top: -30px;
+            left: 20px;
+        }
+
+        .testimonial p {
+            margin: 0;
+            font-style: italic;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .testimonial span {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: right;
+            color: #333;
+        }
+
+        .stars {
+            color: #ffd700;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            width: 300px;
+            justify-content: center;
+        }
+
+        .contact-info a.whatsapp {
+            background-color: #a1cda8;
+            color: #1c5d21;
+        }
+
+        .contact-info a.whatsapp:hover {
+            background-color: #8ebd96;
+            color: #0d3d13;
+        }
+
+        .contact-info a.email {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .contact-info a.email:hover {
+            background-color: #e0e0e0;
+            color: #000;
+        }
+
+        .contact-info img {
+            margin-right: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #333;
+            color: #fff;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0 0;
+        }
+
+        footer ul li {
+            margin: 0 15px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: #4caf50;
+            text-decoration: underline;
+        }
     </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            const form = document.querySelector("#booking form");
+            form.addEventListener("submit", async function(event) {
+                event.preventDefault();
+                const formData = new FormData(form);
+                const response = await fetch("https://formspree.io/f/your-form-id", {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                if (response.ok) {
+                    alert("Thank you for your booking request! We will get back to you soon.");
+                    form.reset();
+                } else {
+                    alert("Oops! There was a problem submitting your form. Please try again later.");
+                }
+            });
+        });
+    </script>
 </head>
 <body>
-    <main class="main-content">
-        <div class="information-box">
-            <h1>Welcome to WALKR!</h1>
-            <h2>Your Trusted Dog Walking Service</h2>
-            <p>Our website is fetching some <strong>exciting new features!</strong> While we're busy perfecting it, let us take care of all <strong>your dog walking needs.</strong> Feel free to <strong>reach out to us</strong> – we can't wait to meet your furry pal!</p>
-            <div class="location">
-                <h3>Our Location</h3>
-                <div class="location-container">
-                  
-                    <div class="location-item">
-                        <i class="fa fa-map-marker"></i>
-                        <a href="https://maps.app.goo.gl/sUziZWz8vQA5thz77" target="_blank">The Neighbourhood</a>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <a class="contact-item" href="https://wa.me/27767944736">
-                    <i class="fa fa-whatsapp"></i>
-                    076 794 4736
-                </a>
-                <a class="contact-item" href="mailto:chris@walkr.co.za">
-                    <i class="fa fa-envelope"></i>
-                    chris@walkr.co.za
-                </a>
-            </div>
+    <header>
+        <h1>Walkr</h1>
+        <p>Caring for your furry friends, one walk at a time.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Walkr</h2>
+        <p>We offer professional dog walking and house-sitting services in your neighborhood. Let us take care of your furry friends while you're away or just need an extra hand!</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Our passion for pets drives everything we do. With years of experience in dog walking and house-sitting, we treat each pet as if they were our own.</p>
+        <img src="your-photo.jpg" alt="Photo of Chris">
+        <blockquote>"Chris was amazing with our dog Max! Highly recommend." - Happy Client</blockquote>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>
+                <h3>Dog Walks</h3>
+                <p>Enjoy peace of mind knowing your dog is getting the exercise and attention they deserve.</p>
+            </li>
+            <li>
+                <h3>House Sitting</h3>
+                <p>We make sure your home and pets are well cared for while you are away.</p>
+            </li>
+            <li>
+                <h3>Pet Sitting</h3>
+                <p>Reliable pet sitting services that ensure your pets are comfortable and happy.</p>
+            </li>
+        </ul>
+        <p>We offer flexible prices and packages, including a monthly pet care package tailored to your needs.</p>
+    </section>
+
+    <section id="booking">
+        <h2>Book a Service</h2>
+        <form id="booking-form" action="https://formspree.io/f/your-form-id" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="service">Select a Service:</label>
+            <select id="service" name="service">
+                <option value="dog-walk">Dog Walk</option>
+                <option value="house-sitting">House Sitting</option>
+                <option value="pet-sitting">Pet Sitting</option>
+            </select>
+
+            <label for="details">Additional Details:</label>
+            <textarea id="details" name="details"></textarea>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"Christopher has been walking my dogs for a while now and is a very compassionate and patient person. The dogs love him! He is a great dog walker, very reliable and is highly recommended."</p>
+            <span>- Sheena Geness</span>
         </div>
-        <img src="./Images/DogWalking.gif" alt="Dog Walking" class="dog-walking-gif">
-    </main>  
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"Thank you to Christopher who house sat and looked after my two dogs. Fabulous services, dogs were happy and calm. The house was perfect. I can highly recommend Christopher!"</p>
+            <span>- Glenda Dewey</span>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <a href="https://wa.me/27767944736" target="_blank" class="whatsapp">
+                <img src="whatsapp-icon.png" alt="WhatsApp" width="24" height="24"> 076 794 4736
+            </a>
+            <a href="mailto:chris@walkr.co.za" class="email">
+                <img src="email-icon.png" alt="Email" width="24" height="24"> chris@walkr.co.za
+            </a>
+        </div>
+        <form action="/submit-inquiry" method="post">
+            <label for="inquiry-name">Your Name:</label>
+            <input type="text" id="inquiry-name" name="name" required>
+
+            <label for="inquiry-email">Your Email:</label>
+            <input type="email" id="inquiry-email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <img src="dog1.jpg" alt="Happy dog in the park">
+        <img src="dog2.jpg" alt="Group dog walk">
+        <img src="dog3.jpg" alt="Chris playing with a dog">
+    </section>
+
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <h3>What areas do you cover?</h3>
+        <p>We cover Walkr estate and surrounding areas.</p>
+        <h3>How do I book a service?</h3>
+        <p>You can book directly through our website using the booking form.</p>
+        <h3>Are you insured?</h3>
+        <p>Yes, we are fully insured for all pet services we provide.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Walkr. All Rights Reserved.</p>
+        <ul>
+            <li><a href="https://www.whatsapp.com" target="_blank">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+        </ul>
+    </footer>
 </body>
-</html>
 </html>
