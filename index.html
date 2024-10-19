@@ -6,12 +6,6 @@
     <title>Walkr - Dog Walking & House Sitting</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        nav.sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -22,46 +16,11 @@
         }
 
         header {
-            position: fixed;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            top: 0;
-            left: 0;
-        }
-
-        header video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transform: translate(-50%, -50%);
-        }
-
-        header h1 {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            background-color: #4caf50;
             color: #fff;
+            padding: 20px;
             text-align: center;
-            z-index: 1;
-            font-size: 3em;
-            margin-bottom: 0;
-        }
-
-        header p {
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            text-align: center;
-            z-index: 1;
-            font-size: 1.5em;
-            margin-top: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         nav ul {
@@ -83,12 +42,6 @@
             padding: 14px 20px;
             display: block;
             transition: background-color 0.3s ease;
-        }
-
-        nav ul li a.logo {
-            font-weight: bold;
-            font-size: 1.5em;
-            color: white;
         }
 
         nav ul li a:hover {
@@ -392,15 +345,7 @@
     </style>
     <script>
         window.addEventListener("DOMContentLoaded", function() {
-            const nav = document.querySelector('nav');
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 0) {
-                    nav.classList.add('sticky');
-                } else {
-                    nav.classList.remove('sticky');
-                }
-            });
-            const form = document.querySelector("#booking-form");
+            const form = document.querySelector("#booking form");
             form.addEventListener("submit", async function(event) {
                 event.preventDefault();
                 const formData = new FormData(form);
@@ -422,10 +367,12 @@
     </script>
 </head>
 <body>
-    
+    <header>
+        <h1>Walkr</h1>
+    </header>
+
     <nav>
         <ul>
-            <li><a href="#home" class="logo">Walkr</a></li>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#services">Services</a></li>
@@ -438,15 +385,14 @@
     </nav>
 
     <section id="home">
-        <h2>Welcome to Walkr</h2>
-        <p>We offer professional dog walking and house-sitting services in your neighborhood. Let us take care of your furry friends while you're away or just need an extra hand!</p>
+        <p>We offer professional dog walking and house-sitting services in The Neighborhood Estate. Going away or just need a helping hand? We would love to help and be there for your pets!</p>
     </section>
 
     <section id="about">
         <h2>About Us</h2>
-        <p>Our passion for pets drives everything we do. With years of experience in dog walking and house-sitting, we treat each pet as if they were our own.</p>
-        <img src="your-photo.jpg" alt="Photo of Chris">
-        <blockquote>"Chris was amazing with our dog Max! Highly recommend." - Happy Client</blockquote>
+        <p>My name is Chris. I am a third year student at Wits University. With years of experience in dog walking and house-sitting, I treat each pet as if they were my own.</p>
+        <img src="DSC02398.jpg">
+        <blockquote>"Chris was amazing with our dog Hunter! Highly recommend." - Riaska Geness</blockquote>
     </section>
 
     <section id="services">
@@ -458,18 +404,17 @@
             </li>
             <li>
                 <h3>House Sitting</h3>
-                <p>We make sure your home and pets are well cared for while you are away.</p>
+                <p>We make sure your home is well cared for while you are away.</p>
             </li>
             <li>
                 <h3>Pet Sitting</h3>
-                <p>Reliable pet sitting services that ensure your pets are comfortable and happy.</p>
+                <p>Reliable pet sitting services that ensure your pets are comfortable and happy and your house is secure.</p>
             </li>
         </ul>
-        <p>We offer flexible prices and packages, including a monthly pet care package tailored to your needs.</p>
     </section>
 
     <section id="booking">
-        <h2>Book a Service</h2>
+        <h2>Make an enquiry</h2>
         <form id="booking-form" action="https://formspree.io/f/your-form-id" method="post">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
@@ -531,15 +476,17 @@
 
     <section id="gallery">
         <h2>Gallery</h2>
-        <img src="dog1.jpg" alt="Happy dog in the park">
-        <img src="dog2.jpg" alt="Group dog walk">
-        <img src="dog3.jpg" alt="Chris playing with a dog">
+        <img src="DSC02256.jpg">
+        <img src="DSC02313.jpg">
+        <img src="DSC02365.jpg">
+        <img src="DSC02457.jpg">
+        <img src="DSC02470.jpg">
     </section>
 
     <section id="faq">
         <h2>Frequently Asked Questions</h2>
         <h3>What areas do you cover?</h3>
-        <p>We cover Walkr estate and surrounding areas.</p>
+        <p>We primarily cover The Neighbourhood Estate and occasionally other areas.</p>
         <h3>How do I book a service?</h3>
         <p>You can book directly through our website using the booking form.</p>
         <h3>Are you insured?</h3>
@@ -549,9 +496,8 @@
     <footer>
         <p>&copy; 2024 Walkr. All Rights Reserved.</p>
         <ul>
-            <li><a href="https://www.whatsapp.com" target="_blank">WhatsApp</a></li>
-            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
-            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://wa.me/27767944736" target="_blank">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/walkr.co.za" target="_blank">Instagram</a></li>
         </ul>
     </footer>
 </body>
