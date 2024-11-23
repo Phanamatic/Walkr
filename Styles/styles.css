@@ -56,7 +56,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allows navigation items to wrap on smaller screens */
     padding: 10px 0;
 }
 
@@ -287,13 +287,7 @@ main {
     box-shadow: 0 0 25px var(--shadow-color);
     margin-bottom: 50px;
     text-align: center;
-}
-
-#contact h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
-    color: var(--primary-color);
-    margin-bottom: 30px;
+    border: 2px solid var(--primary-color);
 }
 
 .contact-box {
@@ -301,6 +295,13 @@ main {
     padding: 20px;
     border-radius: 16px;
     background-color: #fafafa;
+}
+
+#contact h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
 }
 
 .contact-info {
@@ -413,7 +414,7 @@ main {
 
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     max-width: 800px;
     margin: auto;
@@ -533,7 +534,7 @@ footer ul li a:hover {
     }
 
     .gallery-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
@@ -650,5 +651,47 @@ footer ul li a:hover {
     /* Gallery Images */
     .gallery-container {
         grid-template-columns: 1fr;
+    }
+
+    /* Enhance Navigation Bar for Very Small Devices */
+    nav ul {
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+    }
+
+    nav ul::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    nav ul::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color);
+        border-radius: 4px;
+    }
+
+    /* Reduce Font Sizes for Buttons on Small Screens */
+    .contact-info a {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    /* Reduce Icon Sizes */
+    .contact-info a i {
+        margin-right: 5px;
+        font-size: 1em;
+    }
+
+    /* Adjust 'Our Services' Items to Fit Better */
+    #services ul li {
+        width: 90%;
+    }
+
+    /* Adjust 'Contact Us' Box for Better Fit */
+    .contact-box {
+        padding: 15px;
+    }
+
+    /* Adjust Other Box Classes for Consistent Fit */
+    .gallery-box,
+    .faq-box {
+        padding: 15px;
     }
 }
