@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walkr - Dog Walking & House Sitting</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="./Styles/styles.css">
 </head>
 <body>
     <header>
         <h1>Walkr</h1>
+        <p>Your Trusted Partner for Dog Walking & House Sitting</p>
     </header>
+    
     <nav>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
         <ul id="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
@@ -22,97 +34,125 @@
             <li><a href="#faq">FAQ</a></li>
         </ul>
     </nav>
-    <section id="home">
-        <p>We offer professional dog walking and house-sitting services in The Neighborhood Estate. Going away or just need a helping hand? We would love to help and be there for your pets!</p>
-    </section>
+    
+    <main>
+        <section id="home">
+            <h2>Welcome to Walkr</h2>
+            <p>We offer professional dog walking and house-sitting services in The Neighborhood Estate. Whether you're going away or just need a helping hand, we're here to ensure your pets are happy and well-cared for!</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>My name is Chris. I am a third-year student at Wits University. With years of experience in dog walking and house-sitting, I treat each pet as if they were my own.</p>
-        <img src="./images/DSC02457.png" alt="Chris walking a dog">
-        <blockquote>"Chris was amazing with our dog Hunter! Highly recommend." - Riaska Geness</blockquote>
-    </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <img src="./images/DSC02457.png" alt="Chris walking a dog">
+                <div class="about-text">
+                    <p>Hi! I'm Chris, a dedicated dog walker and house sitter with years of experience. As a third-year student at Wits University, I bring both passion and reliability to every service I provide. Your pets are treated as my own, ensuring they receive the love and attention they deserve.</p>
+                    <blockquote>"Chris was amazing with our dog Hunter! Highly recommend." - Riaska Geness</blockquote>
+                </div>
+            </div>
+        </section>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>
-                <h3>Dog Walks</h3>
-                <p>Enjoy peace of mind knowing your dog is getting the exercise and attention they deserve.</p>
-            </li>
-            <li>
-                <h3>House Sitting</h3>
-                <p>We make sure your home is well cared for while you are away.</p>
-            </li>
-            <li>
-                <h3>Pet Sitting</h3>
-                <p>Reliable pet sitting services that ensure your pets are comfortable and happy and your house is secure.</p>
-            </li>
-        </ul>
-    </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-dog fa-3x"></i>
+                    <h3>Dog Walks</h3>
+                    <p>Enjoy peace of mind knowing your dog is getting the exercise and attention they deserve.</p>
+                </li>
+                <li>
+                    <i class="fas fa-home fa-3x"></i>
+                    <h3>House Sitting</h3>
+                    <p>We make sure your home is well cared for while you are away.</p>
+                </li>
+                <li>
+                    <i class="fas fa-paw fa-3x"></i>
+                    <h3>Pet Sitting</h3>
+                    <p>Reliable pet sitting services that ensure your pets are comfortable and happy and your house is secure.</p>
+                </li>
+            </ul>
+        </section>
 
-    <section id="testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonial">
-            <div class="stars">★★★★★</div>
-            <p>"Christopher has been walking my dogs for a while now and is a very compassionate and patient person. The dogs love him! He is a great dog walker, very reliable and is highly recommended."</p>
-            <span>- Sheena Geness</span>
-        </div>
-        <div class="testimonial">
-            <div class="stars">★★★★★</div>
-            <p>"Thank you to Christopher who house sat and looked after my two dogs. Fabulous services, dogs were happy and calm. The house was perfect. I can highly recommend Christopher!"</p>
-            <span>- Glenda Dewey</span>
-        </div>
-    </section>
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Christopher has been walking my dogs for a while now and is a very compassionate and patient person. The dogs love him! He is a great dog walker, very reliable and is highly recommended."</p>
+                <span>- Sheena Geness</span>
+            </div>
+            <div class="testimonial">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Thank you to Christopher who house sat and looked after my two dogs. Fabulous services, dogs were happy and calm. The house was perfect. I can highly recommend Christopher!"</p>
+                <span>- Glenda Dewey</span>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-info">
-            <a href="https://wa.me/27767944736" target="_blank" class="whatsapp">
-                <img src="./images/whatsapp-icon.png" alt="WhatsApp" width="24" height="24"> 076 794 4736
-            </a>
-            <a href="mailto:chris@walkr.co.za" class="email">
-                <img src="./images/Email-icon.png" alt="Email" width="24" height="24"> chris@walkr.co.za
-            </a>
-        </div>
-        <form action="/submit-inquiry" method="post">
-            <label for="inquiry-name">Your Name:</label>
-            <input type="text" id="inquiry-name" name="name" required>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <a href="https://wa.me/27767944736" target="_blank" class="whatsapp">
+                    <i class="fab fa-whatsapp fa-lg"></i> 076 794 4736
+                </a>
+                <a href="mailto:chris@walkr.co.za" class="email">
+                    <i class="fas fa-envelope fa-lg"></i> chris@walkr.co.za
+                </a>
+            </div>
+            <form action="https://formspree.io/f/your-form-id" method="post">
+                <label for="inquiry-name">Your Name:</label>
+                <input type="text" id="inquiry-name" name="name" required>
 
-            <label for="inquiry-email">Your Email:</label>
-            <input type="email" id="inquiry-email" name="email" required>
+                <label for="inquiry-email">Your Email:</label>
+                <input type="email" id="inquiry-email" name="email" required>
 
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message"></textarea>
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
 
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
 
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-container">
-            <img src="./images/DSC02313.png" alt="Dog playing in the park">
-            <img src="./images/DSC02470.png" alt="House sitting service">
-            <img src="./images/DSC02256.png" alt="Walking in the neighborhood">
-            <img src="./images/DSC02365.png" alt="Happy pet at home">
-            <img src="./images/DSC02398.png" alt="Dog enjoying a walk">
-        </div>
-    </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="./images/DSC02313.png" alt="Dog playing in the park">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/DSC02470.png" alt="House sitting service">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/DSC02256.png" alt="Walking in the neighborhood">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/DSC02365.png" alt="Happy pet at home">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/DSC02398.png" alt="Dog enjoying a walk">
+                </div>
+                <!-- Add more images as needed -->
+            </div>
+        </section>
 
-    <section id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <h3>What areas do you cover?</h3>
-        <p>We primarily cover The Neighborhood Estate and occasionally other areas.</p>
-        <h3>How do I book a service?</h3>
-        <p>Please contact us through our WhatsApp or email!</p>
-    </section>
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>What areas do you cover?</h3>
+                <p>We primarily cover The Neighborhood Estate and occasionally other nearby areas.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I book a service?</h3>
+                <p>Please contact us through our WhatsApp or email to book a service!</p>
+            </div>
+            <!-- Add more FAQs as needed -->
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2024 Walkr. All Rights Reserved.</p>
         <ul>
-            <li><a href="https://wa.me/27767944736" target="_blank">WhatsApp</a></li>
-            <li><a href="https://www.instagram.com/walkr.co.za" target="_blank">Instagram</a></li>
+            <li><a href="https://wa.me/27767944736" target="_blank"><i class="fab fa-whatsapp fa-lg"></i> WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/walkr.co.za" target="_blank"><i class="fab fa-instagram fa-lg"></i> Instagram</a></li>
         </ul>
     </footer>
 
@@ -122,6 +162,14 @@
             const navLinks = document.getElementById('nav-links');
             navLinks.classList.toggle('active');
         }
+
+        // Close the menu when clicking outside
+        window.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            if (!nav.contains(event.target) && nav.querySelector('#nav-links').classList.contains('active')) {
+                nav.querySelector('#nav-links').classList.remove('active');
+            }
+        });
     </script>
 </body>
 </html>
