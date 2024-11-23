@@ -11,11 +11,11 @@
         <h1>Walkr</h1>
     </header>
     <nav>
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#booking">Booking</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#gallery">Gallery</a></li>
@@ -28,8 +28,8 @@
 
     <section id="about">
         <h2>About Us</h2>
-        <p>My name is Chris. I am a third year student at Wits University. With years of experience in dog walking and house-sitting, I treat each pet as if they were my own.</p>
-        <img src="./images/DSC02457.png">
+        <p>My name is Chris. I am a third-year student at Wits University. With years of experience in dog walking and house-sitting, I treat each pet as if they were my own.</p>
+        <img src="./images/DSC02457.png" alt="Chris walking a dog">
         <blockquote>"Chris was amazing with our dog Hunter! Highly recommend." - Riaska Geness</blockquote>
     </section>
 
@@ -49,29 +49,6 @@
                 <p>Reliable pet sitting services that ensure your pets are comfortable and happy and your house is secure.</p>
             </li>
         </ul>
-    </section>
-
-    <section id="booking">
-        <h2>Make an enquiry</h2>
-        <form id="booking-form" action="https://formspree.io/f/your-form-id" method="post">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="service">Select a Service:</label>
-            <select id="service" name="service">
-                <option value="dog-walk">Dog Walk</option>
-                <option value="house-sitting">House Sitting</option>
-                <option value="pet-sitting">Pet Sitting</option>
-            </select>
-
-            <label for="details">Additional Details:</label>
-            <textarea id="details" name="details"></textarea>
-
-            <button type="submit">Book Now</button>
-        </form>
     </section>
 
     <section id="testimonials">
@@ -114,19 +91,21 @@
 
     <section id="gallery">
         <h2>Gallery</h2>
-        <img src="./images/DSC02313.png">
-        <img src="./images/DSC02470.png">
-        <img src="./images/DSC02256.png">
-        <img src="./images/DSC02365.png">
-        <img src="./images/DSC02398.png">
+        <div class="gallery-container">
+            <img src="./images/DSC02313.png" alt="Dog playing in the park">
+            <img src="./images/DSC02470.png" alt="House sitting service">
+            <img src="./images/DSC02256.png" alt="Walking in the neighborhood">
+            <img src="./images/DSC02365.png" alt="Happy pet at home">
+            <img src="./images/DSC02398.png" alt="Dog enjoying a walk">
+        </div>
     </section>
 
     <section id="faq">
         <h2>Frequently Asked Questions</h2>
         <h3>What areas do you cover?</h3>
-        <p>We primarily cover The Neighbourhood Estate and occasionally other areas.</p>
+        <p>We primarily cover The Neighborhood Estate and occasionally other areas.</p>
         <h3>How do I book a service?</h3>
-        <p>Please contact us through our whatsapp or email!</p>
+        <p>Please contact us through our WhatsApp or email!</p>
     </section>
 
     <footer>
@@ -136,5 +115,13 @@
             <li><a href="https://www.instagram.com/walkr.co.za" target="_blank">Instagram</a></li>
         </ul>
     </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
