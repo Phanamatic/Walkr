@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< Updated upstream
     <title>Walkr - Dog Walking & House Sitting</title>
     <link rel="stylesheet" href="./Styles/styles.css">
 </head>
@@ -136,5 +137,104 @@
             <li><a href="https://www.instagram.com/walkr.co.za" target="_blank">Instagram</a></li>
         </ul>
     </footer>
+=======
+    <title>Navbar Design</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: rgba(0, 0, 0, 0); /* LIAM ITS HERE BRUHHHH Transparent background */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            width: 100px;
+            height: 50px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ddd;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #ddd;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .nav-links {
+                margin-top: 10px;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            LOGO
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Get in Touch</a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </nav>
+
+    <div style="padding-top: 80px; text-align: center;">
+        <h1>Welcome to Site</h1>
+        <h2>Kinda Wanna Cry Rn</h2>
+  
+    </div>
+>>>>>>> Stashed changes
 </body>
 </html>
